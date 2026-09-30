@@ -1,0 +1,25 @@
+#header {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#index-link {
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+}
+
+.page-selector {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+#header-divider {
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background-color: black;
+}
+

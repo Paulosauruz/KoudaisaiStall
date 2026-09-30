@@ -1,0 +1,68 @@
+#kitchen-page {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Prevents double borders */
+  margin: 20px 0;
+
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: #353535;
+  color: #ffffff;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px 15px; /* Adds space inside cells */
+}
+
+td {
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr {
+  border-bottom: 1px solid #000000;
+}
+
+/* Zebra striping - highlights alternating rows */
+tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+
+/* Hover effect for better readability */
+tbody tr:hover {
+  background-color: #d4d4d4;
+}
+
+/* mark as done button */
+.done-button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    
+    background-color: #4CAF50;
+    color: white;
+    
+    font-size: 15px;
+    font-weight: bold;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.done-button:hover {
+    background-color: #43a047;
+}
+
+.done-button:active {
+    transform: scale(0.95);
+}

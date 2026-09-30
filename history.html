@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSEP SPOT</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\history.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="big-title">
+            <a id="index-link" href="index.html" class="page-selector">
+                GSEP Spot
+            </a>
+        </h1>
+
+        <a id="order-link" href="order.html" class="page-selector">
+            Order
+        </a>
+
+        <a id="kitchen-link" href="kitchen.html" class="page-selector">
+            Kitchen
+        </a>
+
+        <a id="history-link" href="history.html" class="page-selector">
+            History
+        </a>
+        <hr id="header-divider">
+    </div>
+    
+    <div id="history-page">
+        <h2>Order History</h2>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Time Stamp</th>
+                </tr>
+            <thead>
+
+            <tbody id="order-history">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="js\menu-data.js" defer></script>
+    <script src="js\history.js" type="module"></script>
+    <script src="js\firebase-config.js" type="module"></script>
+</body>
+</html>
