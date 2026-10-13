@@ -43,6 +43,16 @@ const menu = [
         category: "Candies",
         price: 100,
         availability: true
-    }
+    },
 
+    {
+        id: "penis",
+        name: "Penis",
+        category: "Candies",
+        sizes: {
+            small: 20,
+            medium: 40
+        },
+        availability: true
+    }
 ];
