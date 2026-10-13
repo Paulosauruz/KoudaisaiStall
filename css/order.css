@@ -16,3 +16,265 @@
 #order-page {
     text-align: center;
 }
+
+/* nav bar */
+
+.order-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 0 auto 30px;
+    padding: 8px;
+
+    background: white;
+    border: 1px solid gray;
+    border-radius: 999px;
+
+    width: fit-content;
+
+    position: sticky;
+    top: 15px;
+    z-index: 10;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.order-nav a {
+    padding: 8px 18px;
+    border-radius: 999px;
+
+    color: gray;
+    font-size: 19px;
+    font-weight: 700;
+
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.order-nav a:hover {
+    background: rgb(67, 67, 67);
+    color: white;
+}
+
+/* order action bar */
+.order-action-bar {
+    position: sticky;
+    bottom: 15px;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    width: fit-content;
+    max-width: 100%;
+    margin: 25px auto 0;
+    padding: 10px;
+
+    background: white;
+    border: 1px solid #2c3845;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.order-action-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+
+    background-color: #438fc5;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.order-action-button:hover {
+    background-color: #3279aa;
+}
+
+.order-action-button:active {
+    transform: scale(0.96);
+}
+
+.order-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 940px;
+    margin: 0 auto 40px;
+}
+
+.order-card {
+    width: 270px;
+    max-width: 100%;
+    padding: 22px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+}
+
+.order-card h3 {
+    margin: 0 0 18px;
+    font-size: 23px;
+    line-height: 1.1;
+}
+
+.order-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 10px 0;
+    border-top: 1px solid gray;
+}
+
+.order-price {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-control span {
+    min-width: 22px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 1px solid gray;
+    border-radius: 50%;
+
+    background: #f7f7f7;
+    color: black;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.quantity-control button:hover {
+    background: rgb(81, 81, 81);
+    color: white;
+    border-color: black;
+}
+
+.quantity-control button:active {
+    transform: scale(0.9);
+}
+
+/* customize color */
+#butter-fly-pea {
+    border-color: purple;
+    color: rgb(110, 0, 110);
+}
+
+#hales-blue-boy {
+    border-color: red;
+    color: rgb(151, 0, 0);
+}
+
+#lemon {
+    border-color: rgb(104, 104, 0);
+    color: rgb(104, 118, 0);
+}
+
+#nelli {
+    border-color: green;
+    color: rgb(0, 97, 0);
+}
+
+#rooh-afza {
+    border-color: rosybrown;
+    color: rgb(201, 91, 91);
+}
+
+#sea-buckthorn {
+    border-color: rgb(190, 124, 1);
+    color: rgb(216, 101, 0);
+}
+
+#vimto {
+    border-color: purple;
+    color: rgb(97, 0, 97);
+}
+
+/* verify order */
+.verify-order-items {
+    line-height: 1.8;
+}
+
+.addons-button {
+    margin-left: 7px;
+}
+
+/* pop-ups */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup-box {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popup-box h2 {
+    margin-top: 0;
+}
+
+.popup-box label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}

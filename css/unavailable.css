@@ -1,0 +1,119 @@
+#unavailable-page {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Prevents double borders */
+  margin: 20px 0;
+
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+
+thead tr {
+  background-color: #353535;
+  color: #ffffff;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px 15px; /* Adds space inside cells */
+}
+
+td {
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr {
+  border-bottom: 1px solid #000000;
+}
+
+/* Zebra striping - highlights alternating rows */
+tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+
+/* Hover effect for better readability */
+tbody tr:hover {
+  background-color: #d4d4d4;
+}
+
+/* back to kitchen button */
+#back-to-kitchen {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background-color: #f0f0f0;
+    color: #333;
+
+    border: 1.3px solid black;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    text-decoration: none;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+#back-to-kitchen:hover {
+    background-color: #e0e0e0;
+    border-color: #666;
+}
+
+#back-to-kitchen:active {
+    background-color: #d0d0d0;
+}
+
+/* mark as unavailable button */
+.mark-as-unavailable-button, .mark-as-available-button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    
+    font-size: 15px;
+    font-weight: bold;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.mark-as-unavailable-button {
+    background-color: #af634c;
+}
+
+.mark-as-unavailable-button:hover {
+    background-color: #9f6345;
+}
+
+.mark-as-available-button {
+    background-color: #4caf51;
+}
+
+.mark-as-available-button:hover {
+    background-color: #429956;
+}
+
+.mark-as-unavailable-button:active , .mark-as-available-button:active {
+    transform: scale(0.95);
+}
+
+#text-available {
+    color: green;
+}
+
+#text-unavailable {
+    color: red;
+}

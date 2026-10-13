@@ -34,25 +34,58 @@
     <div id="kitchen-page">
         <h2>Kitchen Page</h2>
         <p>Click "Complete" when the order is completed!</p>
-        <table id="kitchen-table">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Items</th>
-                    <th>Total</th>
-                    <th>Time Stamp</th>
-                    <th>Status</th>
-                </tr>
-            <thead>
+        <a id="mark-unavailable" href="unavailable.html">Mark items as unavailable</a>
+        <div class="table-container">
+            <table id="kitchen-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Time Stamp</th>
+                        <th>Status</th>
+                        <th>Cancel</th>
+                    </tr>
+                <thead>
 
-            <tbody id="kitchen-order">
-                
-            </tbody>
-        </table>
-
+                <tbody id="kitchen-order">
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <script src="js\menu-data.js" defer></script>
+    <div id="complete-order-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button id="popup-close" class="popup-close">&times;</button>
+
+            <h2>Complete Order?</h2>
+
+            <div id="popup-order-details"></div>
+
+            <div class="popup-buttons">
+                <button id="popup-cancel" type="button">Cancel</button>
+                <button id="popup-confirm" type="button">Complete Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cancel-order-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button id="cancel-popup-close" class="popup-close">&times;</button>
+
+            <h2>Cancel Order?</h2>
+
+            <div id="cancel-order-details"></div>
+
+            <div class="popup-buttons">
+                <button id="cancel-popup-back" type="button">Go Back</button>
+                <button id="cancel-popup-confirm" type="button">Cancel Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js\menu-data.js" type="module"></script>
     <script src="js\kitchen.js" type="module"></script>
     <script src="js\firebase-config.js" type="module"></script>
 </body>

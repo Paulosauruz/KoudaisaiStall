@@ -8,6 +8,8 @@ import {
 
 import { db } from "./firebase-config.js";
 
+import { menu } from "./menu-data.js";
+
 const ordersQuery = query(
     collection(db, "orders"),
     orderBy("createdAt", "desc")
@@ -15,6 +17,8 @@ const ordersQuery = query(
 
 onSnapshot(ordersQuery, (snapshot) => {
 
+    let totalEarned = 0;
+    
     const historyTable = document.getElementById("order-history");
 
     historyTable.innerHTML = "";
@@ -27,7 +31,7 @@ onSnapshot(ordersQuery, (snapshot) => {
 
         row.innerHTML = `
             <td>${order.orderId}</td>
-            <td>${displayItems(order.items)}</td>
+            <td style="width: 50%;">${displayItems(order.items)}</td>
             <td>¥${order.total}</td>
             <td>
                 <span class="status ${order.status}">
@@ -39,22 +43,43 @@ onSnapshot(ordersQuery, (snapshot) => {
         `;
 
         historyTable.appendChild(row);
+
+        // calculating total earned
+        if (order.status != "cancelled") {
+            totalEarned += order.total;
+        }
     }
+
+    // putting in total earned
+    const totalEarnedDisplay = document.getElementById("total-earned");
+    totalEarnedDisplay.textContent = `Total Earned: ¥${totalEarned}`;
+
 });
 
 function displayItems(items) {
-
+    
     let text = "";
 
     for (const item of items) {
 
+        text += `<div class="kitchen-page-item">`;
+        
         text += menu.find(menuItem => menuItem.id === item.id).name;
 
         if (item.size) {
             text += ` (${item.size})`;
         }
 
-        text += ` x ${item.quantity}, `;
+        if ("addons" in item) {
+            text += ` (${item.addons.join(`, `)})`;
+        }
+
+        if (item.quantity) {
+            text += ` x ${item.quantity}, `;
+        }
+
+        // separating each items into each line
+        text += `</div>`;
     }
 
     return text;

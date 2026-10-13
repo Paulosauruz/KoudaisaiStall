@@ -36,7 +36,28 @@
         <button type="button" id="cancel-order" class="order-button">Cancel Existing Order</button>
     </div>
 
-    <script src="js\menu-data.js" defer></script>
+    <div id="addons-popup" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Select Add-ons</h2>
+
+            <label>
+                <input type="checkbox" value="soda">
+                Soda (+¥50)
+            </label>
+
+            <label>
+                <input type="checkbox" value="honey">
+                Honey (+¥50)
+            </label>
+
+            <div class="popup-buttons">
+                <button id="addons-cancel">Cancel</button>
+                <button id="addons-save">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js\menu-data.js" type="module"></script>
     <script src="js\order.js" type="module"></script>
     <script src="js\firebase-config.js" type="module"></script>
 </body>

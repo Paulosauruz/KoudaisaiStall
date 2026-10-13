@@ -20,3 +20,5 @@ export async function sendOrder(order) {
         console.error("Error sending order:", error);
     }
 }
+
+// to push new update to hosting : firebase deploy --only hosting

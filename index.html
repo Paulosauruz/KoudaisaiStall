@@ -10,6 +10,25 @@
 </head>
 
 <body>
+    <!-- Password screen -->
+    <div id="password-screen">
+        <form id="password-form">
+            <h2>Enter Password</h2>
+            <p>Please enter the password to access this website.</p>
+
+            <input
+                type="password"
+                id="site-password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Enter</button>
+
+            <p id="password-error"></p>
+        </form>
+    </div>
+
     <div id="header">
         <h1 id="big-title">
             <a id="index-link" href="index.html" class="page-selector">
@@ -32,6 +51,7 @@
     </div>    
 
     <script src="js\index.js" defer></script>
+    <script src="js\password.js" defer></script>
     <script src="js\firebase-config.js" type="module"></script>
 </body>
 </html>

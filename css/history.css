@@ -42,6 +42,20 @@ tbody tr:hover {
   background-color: #d4d4d4;
 }
 
+.kitchen-page-item {
+    margin-bottom: 4px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 /* status customizations */
 .status {
     display: inline-flex;
@@ -78,4 +92,10 @@ tbody tr:hover {
 
 .status.cancelled .status-dot {
     background-color: red;
+}
+
+@media (max-width: 800px) {
+    .table-container table {
+        min-width: 600px;
+    }
 }
