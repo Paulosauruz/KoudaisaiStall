@@ -9,6 +9,10 @@ firebase-debug.*.log*
 
 # Firebase cache
 .firebase/
+js/firebase-config.js
+package.json
+package-lock.json
+.vscode
 
 # Firebase config
 
